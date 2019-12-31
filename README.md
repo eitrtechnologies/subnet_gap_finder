@@ -49,6 +49,9 @@ $ python3 subnet_gap_finder.py --filename tests/example.txt
 VPC mode basically works the same way, with the exception that we can also see
 unused space at the end of the last subnet until the end of the VPC address
 space. This is (currently) only shown if there aren't any gaps between subnets.
+
+**NOTE**: We're not handling AWS authentication in the script. Ensure that you
+authenticate via the AWS CLI prior to running.
 ```
 $ python3 subnet_gap_finder.py --vpcid vpc-a675b09
 | Gap Start   | Gap End     | Gap CIDRs     |
